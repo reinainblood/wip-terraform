@@ -1,0 +1,32 @@
+{
+  "Id": "key-policy-acct",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Permission to use IAM policies",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::${var.account_id}:root"
+      },
+      "Action": "kms:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Allow parent account to use this KMS key",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::${var.parent_account_id}:root"
+      },
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:ReEncryptFrom",
+        "kms:ReEncryptTo",
+        "kms:GenerateDataKey",
+        "kms:GenerateDataKeyWithoutPlaintext",
+        "kms:DescribeKey"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

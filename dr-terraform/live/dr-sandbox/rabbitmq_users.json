@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "username": "account",
+      "groups": ["management"]
+    },
+    {
+      "username": "amrs",
+      "groups": ["management"]
+    },
+    {
+      "username": "blockchain",
+      "groups": ["management"]
+    },
+    {
+      "username": "custodian",
+      "groups": ["management"]
+    },
+    {
+      "username": "evm",
+      "groups": ["management"]
+    },
+    {
+      "username": "monitoring",
+      "groups": ["management"]
+    },
+    {
+      "username": "notification",
+      "groups": ["management"]
+    },
+    {
+      "username": "pricing",
+      "groups": ["management"]
+    },
+    {
+      "username": "transaction-history",
+      "groups": ["management"]
+    },
+    {
+      "username": "workers",
+      "groups": ["management"]
+    }
+  ]
+}
